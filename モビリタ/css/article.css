@@ -1,0 +1,617 @@
+@charset "utf-8";
+
+/* -----------------------
+  common
+--------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* -----------------------
+  container
+--------------------------*/
+.container {
+  width: 1050px;
+  max-width: 100%;
+}
+
+/* -----------------------
+  local nav 
+--------------------------*/
+.l-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.l-nav__top {
+  width: 19%;
+  color: #fff;
+  background: #000;
+  font-size: 1.6rem;
+  padding: 3.5rem 0 3.5rem 6%;
+  position: relative;
+}
+
+.l-nav__top:before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  width: 81%;
+  padding: 3.5rem 0;
+}
+
+.category__item {
+  padding: 0 2.5rem;
+  border-left: 1px solid #eee;
+}
+
+.category__item:last-child {
+  border-right: 1px solid #eee;
+}
+
+.category__item a {
+  color: #eee;
+  font-size: 1.6rem;
+}
+
+/* -----------------------
+  article
+--------------------------*/
+.article {
+  position: relative;
+}
+
+/* -----------------------
+  pager
+--------------------------*/
+.pager {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pager.-top {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pager.-bottom {
+  margin: 3.5rem auto 12rem;
+}
+
+.pager__prev, .pager__next {
+  color: #666;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.pager__prev:before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #c40e1a;
+}
+
+.pager__next:after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #c40e1a;
+}
+
+/* -----------------------
+  main visual
+--------------------------*/
+.mv {
+  width: 100%;
+}
+
+.mv__img {
+  width: 100%;
+}
+
+/* -----------------------
+  main content
+--------------------------*/
+.mc {
+  margin: 8rem 0;
+}
+
+.mc .container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mc__title {
+  font-size: 3.6rem;
+  line-height: 5.8rem;
+  width: 50%;
+  padding-right: 4.5rem;
+}
+
+.mc__text {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  width: 50%;
+  padding-left: 4.5rem;
+}
+
+/* -----------------------
+  gallary
+--------------------------*/
+.gallary {
+  margin-bottom: 4rem;
+}
+
+.gallary .container{
+  display: flex;
+  width: 100%;
+}
+
+.gallary__item {
+  width: 50%;
+  padding: 5rem 10rem;
+}
+
+.gallary__item.-left {
+  background: #c40e1a;
+}
+
+.gallary__item.-right {
+  background: #222;
+}
+
+.gallary__img {
+  width: 100%;
+}
+
+/* -----------------------
+  sub content
+--------------------------*/
+.sc {
+  margin-top: 8rem;
+}
+
+.sc__title {
+  font-size: 3rem;
+  line-height: 5.8rem;
+}
+
+.sc__subtitle {
+  font-size: 2.2rem;
+  line-height: 4rem;
+  margin-top: 6rem;
+}
+
+.sc__text {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  margin-top: 4rem;
+}
+
+.sc__img {
+  width: 50%;
+}
+
+.sc__img img {
+  width: 100%;
+}
+
+.sc__img-caption {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* 1カラム */
+.sc.-column-one .container {
+  margin: 0 auto;
+}
+
+/* 2カラム中央 */
+.sc.-column-two .container {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sc__img-2column-center {
+  width: 30rem;
+}
+
+.sc__content.-center {
+  width: 74.5rem;
+  padding-left: 6rem;
+}
+
+/* 2カラム右寄せ */
+.sc.-column-two .container.-right {
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 87%;
+}
+
+.sc__img.-right {
+  background: #c40e1a;
+  padding: 4rem 8rem 4.5rem 4rem;
+}
+
+.sc__content.-right {
+  padding-right: 6rem;
+  width: 50%;
+}
+
+/* 2カラム左寄せ */
+.sc.-column-two .container.-left {
+  margin: auto 0 0 0;
+  padding: 0;
+  display: flex;
+  width: 87%;
+}
+
+.sc__img.-left {
+  background: #222;
+  padding: 4rem 4rem 4.5rem 8rem;
+}
+
+.sc__content.-left {
+  padding-left: 6rem;
+  width: 50%;
+}
+
+/* -----------------------
+  topic
+--------------------------*/
+.topic {
+  margin-top: 8rem;
+  background: #444444;
+  color: #fff;
+}
+
+.topic .container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.topic__content {
+  width: 50%;
+  padding: 6.5rem 8.6rem 8rem 10rem;
+}
+
+.topic__title {
+  font-size: 2rem;
+  display: inline;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #c40e1a;
+}
+
+.topic__subtitle {
+  font-size: 2.2rem;
+  line-height: 4rem;
+  margin-top: 6rem;
+}
+
+.topic__text {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  margin-top: 6rem;
+}
+
+.topic__img {
+  width: 50%;
+}
+
+/* -----------------------
+  picture 
+--------------------------*/
+.picture {
+  margin-top: 8rem;
+}
+
+.picture .container {
+  margin: 0 auto;
+}
+
+.picture .container.-w-100 {
+  width: 100%;
+}
+
+.picture__img {
+  width: 100%;
+}
+
+.picture__caption {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+/* -----------------------
+  footer
+--------------------------*/
+footer {
+  background: #cccccc;
+}
+
+/* -----------------------
+  
+  max-width: 1050px
+
+--------------------------*/
+
+@media screen and (max-width: 1050px) {
+/* -----------------------
+  container
+--------------------------*/
+.container {
+  padding: 0 15px;
+}
+
+/* -----------------------
+  pager
+--------------------------*/
+.pager {
+  width: 90%;
+}
+
+.pager.-top {
+  top: 4vw;
+}
+
+
+/* -----------------------
+  main content
+--------------------------*/
+.mc__title {
+  padding-right: 2vw;
+}
+
+.mc__text {
+  padding-left: 2vw;
+}
+
+/* -----------------------
+  sub content
+--------------------------*/
+.sc__subtitle {
+  margin-top: 3vw;
+}
+
+.sc__text {
+  margin-top: 2vw;
+}
+
+/* 2カラム中央 */
+.sc__content.-center {
+  padding-left: 6vw;
+}
+
+/* 2カラム右寄せ */
+.sc.-column-two .container.-right {
+  width: 90%;
+}
+
+.sc__img.-right {
+  padding: 4vw 8vw 4.5vw 4vw;
+}
+
+.sc__content.-right {
+  padding-right: 6vw;
+}
+
+/* 2カラム左寄せ */
+.sc.-column-two .container.-left {
+  width: 90%;
+}
+
+.sc__img.-left {
+  padding: 4vw 4vw 4.5vw 8vw;
+}
+
+.sc__content.-left {
+  padding-left: 6vw;
+}
+
+/* -----------------------
+  gallary
+--------------------------*/
+.gallary .container {
+  padding: 0;
+}
+
+.gallary__item {
+  padding: 5vw 10vw;
+}
+
+/* -----------------------
+  topic
+--------------------------*/
+.topic .container {
+  padding: 0;
+}
+
+.topic__content {
+  padding: 3vw;
+}
+
+.topic__subtitle {
+  margin-top: 6vw;
+}
+
+.topic__text {
+  margin-top: 6vw;
+}
+
+/* -----------------------
+  picture 
+--------------------------*/
+.picture .container.-w-100 {
+  padding: 0;
+}
+
+}
+
+/* -----------------------
+  
+  max-width: 768px
+
+--------------------------*/
+@media screen and (max-width: 768px) {
+/* -----------------------
+  main content
+--------------------------*/
+.mc .container {
+  display: block;
+}
+
+.mc__title, .mc__text {
+  width: 100%;
+}
+
+.mc__title {
+  padding-right: 0;
+}
+
+.mc__text {
+  padding-left: 0;
+  margin-top: 3rem;
+}
+
+/* -----------------------
+  sub content
+--------------------------*/
+.sc.-column-two .container {
+  display: block;
+}
+
+.sc.-column-two .container.-right {
+  display: block;
+  width: 100%;
+}
+
+.sc.-column-two .container.-left {
+  display: block;
+  width: 100%;
+}
+
+.sc__img-2column-center {
+  width: 100%;
+}
+
+.sc__img {
+  width: 100%;
+}
+
+.sc__img.-right {
+  padding: 3rem;
+}
+
+.sc__img.-left {
+  padding: 3rem;
+}
+
+.sc__content {
+  margin-top: 2rem;
+}
+
+.sc__content.-center {
+  width: 100%;
+}
+
+.sc__content.-right {
+  padding-right: 0;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.sc__content.-left {
+  padding-left: 0;
+  width: 100%;
+  padding: 0 15px;
+}
+/* -----------------------
+  gallary
+--------------------------*/
+.gallary .container {
+  display: block;
+}
+
+.gallary__item {
+  width: 100%;
+  padding: 3rem 6rem;
+}
+
+/* -----------------------
+  topic
+--------------------------*/
+.topic .container {
+  display: block;
+}
+
+.topic__content {
+  width: 100%;
+  padding: 3rem 3rem 5rem;
+}
+
+.topic__img {
+  width: 100%;
+}
+
+.topic__subtitle {
+  margin-top: 2rem;
+}
+
+.topic__text {
+  margin-top: 1rem;
+}
+
+}
